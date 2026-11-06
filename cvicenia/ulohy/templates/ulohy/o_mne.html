@@ -1,0 +1,15 @@
+<h1>Volam sa {{ meno }}</h1>
+{% if vek >= 18 %}
+<p>Som plnoleta.</p>
+{% else %}
+<p>Mam {{ vek }}rokov.</p>
+{% endif %}
+
+<h2>Zluby</h2>
+<ul>
+    {% for z in zaluby %}
+    <li>{{ z }}</li>
+    {% empty %}
+    <li>Ziadne zaluby</li>
+    {% endfor %}
+</ul>
