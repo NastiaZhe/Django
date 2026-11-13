@@ -21,3 +21,7 @@ def rozvrh(request):
         {"cislo": 6, "predmet": "IOT"}
     ]
     return render(request, "ulohy/rozvrh.html", {"den": "Piatok", "hodiny": hodiny})
+
+def pozdrav(request):
+    meno = request.GET.get("meno", "") # .get najde a vrati hodnotu prvku s indexom(klucom) meno, ak ho nenajde vlozi prazdny string
+    return render(request, "ulohy/pozdrav.html", {"meno": meno})

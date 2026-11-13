@@ -67,3 +67,4 @@ urlpatterns = [
 	- vytvoriť v priečinku aplikácie priečinok templates/nazov_aplikacie
 	- v tomto priečinku vytvoriť html súbor (napr. index.html)
 9.2 upraviť view.py tak aby používal templates
+
