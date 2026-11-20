@@ -1,0 +1,19 @@
+<h1>Obchod</h1>
+<form method="get">
+    <label>max cena:
+        <input type="text" name="max_cena" value="{{ max_cena }}">
+    </label>
+    <button type="submit">Triedit</button>
+</form>
+{% if chyba %}<p>{{ chyba }}</p>{% endif %}
+<table border="1" cellpadding="6">
+    <tr><th>meno</th><th>Cena</th></tr>
+    {% for p in produkty %}
+    <tr>
+        <td>{{ p.nazov }}</td>
+        <td>{% if p.cena < 5 %}<strong>{{ p.cena|floatformat:2 }} €</strong>{% else %}{{ p.cena|floatformat:2 }} €{% endif %}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="2">Produkty nie su</td></tr>
+    {% endfor %}
+</table>

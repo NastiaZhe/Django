@@ -1,0 +1,9 @@
+<h1>Body</h1>
+<form method="post">
+    {% csrf_token %}
+    <label>Body: <input type="text" name="body"></label>
+    <label>Max: <input type="text" name="max"></label>
+    <button type="submit">Vypocitaj</button>
+</form>
+{% if chyba %}<p>{{ chyba }}</p>{% endif %}
+{% if vysledok %}<p>{{ vysledok }}</p>{% endif %}
